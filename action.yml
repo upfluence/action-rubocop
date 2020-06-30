@@ -1,0 +1,19 @@
+name: 'Run rubocop linter with reviewdog'
+description: 'Run rubocop as github action'
+author: 'thomas isaac (upfluence)'
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN.'
+    required: true
+  rubocop_extensions:
+    description: 'Rubocop extensions'
+    default: 'rubocop-performance:1.5.1 rubocop-minitest'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
+    - ${{ inputs.rubocop_extensions }}
+branding:
+  icon: 'check-circle'
+  color: 'red'
