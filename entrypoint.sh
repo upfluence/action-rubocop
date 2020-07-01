@@ -10,7 +10,7 @@ cd "${GITHUB_WORKSPACE}/" || exit 1
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 export RUBOCOP_VERSION=''
 export FILTER_MODE=added
-export FAILED_ON_ERROR=false
+export FAILED_ON_ERROR=true
 export LEVEL=error
 export REPORTER=github-pr-review
 
