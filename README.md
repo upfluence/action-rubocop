@@ -25,7 +25,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
       - name: rubocop
-        uses: upfluence/action-rubocop@v1
+        uses: upfluence/action-rubocop@master
         with:
           github_token: ${{ secrets.github_token }}
 ```
@@ -43,7 +43,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
       - name: rubocop
-        uses: upfluence/action-rubocop@v1
+        uses: upfluence/action-rubocop@master
         with:
           rubocop_extensions: rubocop-rails
           github_token: ${{ secrets.github_token }}
