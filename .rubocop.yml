@@ -24,6 +24,9 @@ Layout/HashAlignment:
 
 Layout/LineLength:
     Max: 80
+   
+Style/EachWithObject:
+  Enabled: false
 
 AllCops:
   NewCops: enable
