@@ -31,6 +31,15 @@ Layout/LineLength:
 
 Style/EachWithObject:
   Enabled: false
+ 
+Naming/InclusiveLanguage:
+  Enabled: false
+  
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+  
+Naming/MethodParameterName:
+  Enabled: false
 
 AllCops:
   NewCops: enable
