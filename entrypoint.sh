@@ -1,11 +1,13 @@
 #!/bin/sh
+
 get_version_or_null() {
   if [ -n "$1" ]; then
     echo "-v $1"
   fi
 }
 
-cd "${GITHUB_WORKSPACE}/" || exit 1
+cd "${GITHUB_WORKSPACE}" || exit 1
+git config --global --add safe.directory "${GITHUB_WORKSPACE}" || exit 1
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 export RUBOCOP_VERSION=''
