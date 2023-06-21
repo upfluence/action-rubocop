@@ -1,8 +1,8 @@
-FROM ruby:2.6-alpine
+FROM ruby:3.2-alpine
 
 ENV REVIEWDOG_VERSION v0.10.2
 
-SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 RUN apk add --update --no-cache build-base git
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ $REVIEWDOG_VERSION
 
