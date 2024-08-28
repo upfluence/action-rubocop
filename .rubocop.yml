@@ -27,7 +27,7 @@ Layout/HashAlignment:
   EnforcedColonStyle: table
 
 Layout/LineLength:
-  Max: 80
+  Max: 120
 
 Style/EachWithObject:
   Enabled: false
@@ -44,8 +44,16 @@ Naming/MethodParameterName:
 Style/HashSyntax:
   EnforcedShorthandSyntax: never
 
+Lint/Debugger:
+  Enabled: true
+  DebuggerMethods:
+    - pp
+    - p
+    - puts
+
 AllCops:
   NewCops: enable
   Exclude:
     - Gemfile.lock
     - db/schema.rb
+    - bin/*
